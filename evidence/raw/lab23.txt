@@ -1,0 +1,101 @@
+{
+  "growth_table": [
+    {
+      "step": 0,
+      "tokens_this_turn": 54,
+      "cumulative_processed": 54
+    },
+    {
+      "step": 1,
+      "tokens_this_turn": 183,
+      "cumulative_processed": 237
+    },
+    {
+      "step": 2,
+      "tokens_this_turn": 326,
+      "cumulative_processed": 563
+    },
+    {
+      "step": 3,
+      "tokens_this_turn": 468,
+      "cumulative_processed": 1031
+    },
+    {
+      "step": 4,
+      "tokens_this_turn": 636,
+      "cumulative_processed": 1667
+    },
+    {
+      "step": 5,
+      "tokens_this_turn": 767,
+      "cumulative_processed": 2434
+    },
+    {
+      "step": 6,
+      "tokens_this_turn": 861,
+      "cumulative_processed": 3295
+    }
+  ],
+  "first_tokens": 54,
+  "final_tokens": 861,
+  "final_to_first_ratio": 15.94,
+  "cumulative_total": 3295,
+  "cumulative_to_final_ratio": 3.83,
+  "base_compaction": {
+    "recent_turns": 2,
+    "middle_messages": 8,
+    "recent_messages": 4,
+    "summary": "- Total spend per vendor (2025-04-01..2026-03-31):\n  - Northwind Cloud: $412,000 USD\n  - Acme Compute: $288,500 USD\n  - Zephyr Hosting: $96,200 USD\n\n- Monthly trend for Northwind Cloud:\n  - Monthly spend: [31,200, 32,100, 30,800, 33,400, 35,900, 34,100, 36,800, 38,200, 37,500, 39,900, 41,100, 42,000]\n  - Trend: +34.6% over 12 months\n  - Driver: object storage egress\n\n- Monthly trend for Acme Compute:\n  - Monthly spend: [25,100, 24,800, 24,200, 24,500, 23,900, 24,100, 23,800, 24,000, 23,600, 23,900, 23,400, 23,200]\n  - Trend: -7.6% over 12 months\n  - Driver: workload migration off VMs\n\n- Contract end dates and notice periods:\n  - Northwind Cloud: Ends 2026-09-30, 90 days notice, auto-renew, committed-use 15% discount\n  - Acme Compute: Ends 2027-02-28, 30 days notice, no auto-renew, no discount\n  - Zephyr Hosting: Ends 2026-05-15, 60 days notice, auto-renew, startup credit",
+    "before": 861,
+    "after": 740,
+    "saved": 121,
+    "saved_pct": 14.1,
+    "summary_call_tokens": {
+      "input": 726,
+      "output": 455,
+      "total": 1181
+    }
+  },
+  "lost_fact": {
+    "fact": "Northwind overage = 52000 USD",
+    "status": "lost_or_blurred"
+  },
+  "aggressive_compaction": {
+    "recent_turns": 1,
+    "middle_messages": 10,
+    "recent_messages": 2,
+    "summary": "- {\"vendor_spend\": [{\"vendor\": \"Northwind Cloud\", \"usd\": 412000}, {\"vendor\": \"Acme Compute\", \"usd\": 288500}, {\"vendor\": \"Zephyr Hosting\", \"usd\": 96200}], \"period\": \"2025-04-01..2026-03-31\", \"currency\": \"USD\", \"note\": \"Excludes support contracts billed separately.\"}\n- {\"vendor\": \"Northwind Cloud\", \"monthly_usd\": [31200, 32100, 30800, 33400, 35900, 34100, 36800, 38200, 37500, 39900, 41100, 42000], \"trend\": \"+34.6% over 12 months\", \"driver\": \"object storage egress\"}\n- {\"vendor\": \"Acme Compute\", \"monthly_usd\": [25100, 24800, 24200, 24500, 23900, 24100, 23800, 24000, 23600, 23900, 23400, 23200], \"trend\": \"-7.6% over 12 months\", \"driver\": \"workload migration off VMs\"}\n- {\"contracts\": [{\"vendor\": \"Northwind Cloud\", \"ends\": \"2026-09-30\", \"notice_days\": 90, \"auto_renew\": true, \"discount_tier\": \"committed-use 15%\"}, {\"vendor\": \"Acme Compute\", \"ends\": \"2027-02-28\", \"notice_days\": 30, \"auto_renew\": false, \"discount_tier\": \"none\"}, {\"vendor\": \"Zephyr Hosting\", \"ends\": \"2026-05-15\", \"notice_days\": 60, \"auto_renew\": true, \"discount_tier\": \"startup credit\"}]}\n- {\"commitments\": [{\"vendor\": \"Northwind Cloud\", \"committed_usd\": 360000, \"actual_usd\": 412000, \"overage_usd\": 52000, \"overage_rate\": \"list price, no discount\"}, {\"vendor\": \"Acme Compute\", \"committed_usd\": 0, \"actual_usd\": 288500}], \"note\": \"Northwind overage is billed at undiscounted list price.\"}",
+    "before": 861,
+    "after": 772,
+    "saved": 89,
+    "saved_pct": 10.3,
+    "summary_call_tokens": {
+      "input": 877,
+      "output": 619,
+      "total": 1496
+    }
+  },
+  "strict_compaction": {
+    "recent_turns": 2,
+    "middle_messages": 8,
+    "recent_messages": 4,
+    "summary": "- **Total Spend (USD):**\n  - Northwind Cloud: $412,000\n  - Acme Compute: $288,500\n  - Zephyr Hosting: $96,200\n  - Period: 2025-04-01 to 2026-03-31\n  - Note: Excludes support contracts billed separately.\n\n- **Monthly Trend (USD):**\n  - Northwind Cloud: $31,200 to $42,000; +34.6% over 12 months; Driver: object storage egress\n  - Acme Compute: $25,100 to $23,200; -7.6% over 12 months; Driver: workload migration off VMs\n\n- **Contract End Dates and Notice Periods:**\n  - Northwind Cloud: Ends 2026-09-30; 90-day notice; Auto-renew: Yes; Discount Tier: Committed-use 15%\n  - Acme Compute: Ends 2027-02-28; 30-day notice; Auto-renew: No; Discount Tier: None\n  - Zephyr Hosting: Ends 2026-05-15; 60-day notice; Auto-renew: Yes; Discount Tier: Startup credit",
+    "before": 861,
+    "after": 593,
+    "saved": 268,
+    "saved_pct": 31.1,
+    "summary_call_tokens": {
+      "input": 750,
+      "output": 308,
+      "total": 1058
+    }
+  },
+  "strict_preserved_identified_fact": false,
+  "projection_20": {
+    "method": "linear prompt-growth extrapolation; sum prompts for steps 0..20",
+    "initial_prompt_tokens": 54,
+    "average_tokens_added_per_step": 134.5,
+    "estimated_cumulative_tokens": 29379,
+    "design_change": "compact/summarize older history while pinning the goal and keeping recent turns verbatim"
+  }
+}

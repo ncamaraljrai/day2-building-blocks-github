@@ -1,0 +1,626 @@
+{
+  "baseline_runs": [
+    {
+      "initial_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and team size, I recommend we adopt a shared on-call rotation. With only 8 of us, the current approach can lead to inconsistent coverage and potential delays in response. A rotation would ensure 24/7 coverage, improve response times, and distribute the workload more evenly. This will also help in building cross-functional skills and reducing burnout.\n\nLet's discuss this further at our next meeting to finalize the schedule and responsibilities.\n\nBest,\n[Your Name]",
+      "initial_words": 83,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "FAIL\n1. The recommendation is not clearly stated as a singular option. It suggests adopting a shared on-call rotation but does not clearly indicate whether this is the sole recommendation or one of several options.\n2. Only one concrete reason is provided (24/7 coverage and improved response times). A second reason is lacking.\n3. There is no mention of any cost or risk associated with the recommendation.\n4. The draft is 151 words, exceeding the word limit.\n5. The draft does not contain any invented facts about the team beyond what the brief states, but it could be improved by providing more specific details that align with the brief.",
+          "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and team size, I recommend we adopt a shared on-call rotation. With only 8 of us, the current approach can lead to inconsistent coverage and potential delays in response. A rotation would ensure 24/7 coverage, improve response times, and distribute the workload more evenly. This will also help in building cross-functional skills and reducing burnout.\n\nLet's discuss this further at our next meeting to finalize the schedule and responsibilities.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation to ensure consistent coverage and faster incident response. With only 8 team members, our current approach often results in inconsistent handling and delayed reactions. A rotation will provide 24/7 support, improve response times, and distribute workload evenly, reducing burnout.\n\nAdditionally, this will enhance cross-functional skills and ensure no one is overburdened. No costs or risks are associated with this change, as it only involves redistributing existing responsibilities.\n\nLet's discuss this further at our next meeting.\n\nBest,\n[Your Name]"
+        },
+        {
+          "round": 2,
+          "verdict": "FAIL\n1. The draft does not clearly state a recommendation. It presents a shared on-call rotation as a possibility without explicitly stating whether to adopt or not adopt it.\n3. The draft does not mention any real costs or risks associated with the recommendation. It states there are no costs or risks, which is not aligned with the rubric's requirement to name at least one real cost or risk.\n4. The draft is 126 words, which is within the word count but does not address the rubric's requirement for a clear recommendation or mention of costs or risks.",
+          "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation to ensure consistent coverage and faster incident response. With only 8 team members, our current approach often results in inconsistent handling and delayed reactions. A rotation will provide 24/7 support, improve response times, and distribute workload evenly, reducing burnout.\n\nAdditionally, this will enhance cross-functional skills and ensure no one is overburdened. No costs or risks are associated with this change, as it only involves redistributing existing responsibilities.\n\nLet's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation to ensure consistent coverage and faster incident response. With only 8 team members, our current approach often results in inconsistent handling and delayed reactions. A rotation will provide 24/7 support, improve response times, and distribute workload evenly, reducing burnout.\n\nHowever, this change involves redistributing responsibilities, which may initially require some adjustment time. Additionally, there could be a slight initial overhead in setting up the rotation system and communication channels.\n\nLet's discuss this further at our next meeting to ensure everyone is on board.\n\nBest,\n[Your Name]"
+        }
+      ],
+      "final_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation to ensure consistent coverage and faster incident response. With only 8 team members, our current approach often results in inconsistent handling and delayed reactions. A rotation will provide 24/7 support, improve response times, and distribute workload evenly, reducing burnout.\n\nHowever, this change involves redistributing responsibilities, which may initially require some adjustment time. Additionally, there could be a slight initial overhead in setting up the rotation system and communication channels.\n\nLet's discuss this further at our next meeting to ensure everyone is on board.\n\nBest,\n[Your Name]",
+      "final_words": 99,
+      "accepted": false,
+      "max_revisions": 2,
+      "model_calls": 5,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 110,
+            "total": 187
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 275,
+            "output": 133,
+            "total": 408
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 1,
+          "tokens": {
+            "input": 350,
+            "output": 125,
+            "total": 475
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 2,
+          "tokens": {
+            "input": 290,
+            "output": 118,
+            "total": 408
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 2,
+          "tokens": {
+            "input": 350,
+            "output": 130,
+            "total": 480
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 1342,
+        "output": 616,
+        "total": 1958
+      }
+    },
+    {
+      "initial_draft": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nAs we navigate our current incident response process, I recommend implementing a shared on-call rotation. Currently, incidents are handled by whoever notices them, which can lead to inconsistent response times and coverage gaps. A rotation would ensure 24/7 coverage, improve response times, and distribute the burden more evenly among team members. This approach also fosters a culture of responsibility and readiness. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+      "initial_words": 78,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "FAIL\n1. The draft does not make a clear recommendation. It states \"I recommend implementing a shared on-call rotation\" but then goes on to discuss the current process without explicitly stating whether the recommendation is to adopt or not adopt the rotation.\n2. The draft provides two concrete reasons (improve response times and distribute the burden more evenly among team members) tied to the situation.\n3. The draft does not name a real cost or risk of the recommendation.\n4. The draft is 123 words, which is within the acceptable range.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+          "draft_before": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nAs we navigate our current incident response process, I recommend implementing a shared on-call rotation. Currently, incidents are handled by whoever notices them, which can lead to inconsistent response times and coverage gaps. A rotation would ensure 24/7 coverage, improve response times, and distribute the burden more evenly among team members. This approach also fosters a culture of responsibility and readiness. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. Our current approach, where incidents are handled by whoever notices them, leads to inconsistent response times and coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the burden more evenly among team members. This will also foster a culture of responsibility and readiness. By adopting this rotation, we can mitigate risks and enhance our overall operational resilience.\n\nBest,\n[Your Name]"
+        },
+        {
+          "round": 2,
+          "verdict": "FAIL\n1. The draft provides a survey of options rather than making a clear recommendation.\n3. While the draft mentions risks and benefits, it does not specifically name a real cost or risk.\n4. The draft is 112 words, which is within the word count but does not address the rubric requirements.\n2. The draft does not give two concrete reasons tied to the stated situation.",
+          "draft_before": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. Our current approach, where incidents are handled by whoever notices them, leads to inconsistent response times and coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the burden more evenly among team members. This will also foster a culture of responsibility and readiness. By adopting this rotation, we can mitigate risks and enhance our overall operational resilience.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation to address inconsistent response times and coverage gaps. Currently, incidents are handled by whoever notices them, leading to variable response speeds and potential blind spots. Implementing a rotation will ensure 24/7 coverage and distribute the workload more evenly.\n\nSpecifically, this will:\n1. Reduce the risk of incidents going unaddressed during off-hours.\n2. Enhance our team's readiness and responsiveness, improving overall operational resilience.\n\nBy adopting this rotation, we can mitigate these risks and improve our service reliability.\n\nBest,\n[Your Name]"
+        }
+      ],
+      "final_draft": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation to address inconsistent response times and coverage gaps. Currently, incidents are handled by whoever notices them, leading to variable response speeds and potential blind spots. Implementing a rotation will ensure 24/7 coverage and distribute the workload more evenly.\n\nSpecifically, this will:\n1. Reduce the risk of incidents going unaddressed during off-hours.\n2. Enhance our team's readiness and responsiveness, improving overall operational resilience.\n\nBy adopting this rotation, we can mitigate these risks and improve our service reliability.\n\nBest,\n[Your Name]",
+      "final_words": 92,
+      "accepted": false,
+      "max_revisions": 2,
+      "model_calls": 5,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 104,
+            "total": 181
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 269,
+            "output": 131,
+            "total": 400
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 1,
+          "tokens": {
+            "input": 342,
+            "output": 103,
+            "total": 445
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 2,
+          "tokens": {
+            "input": 268,
+            "output": 82,
+            "total": 350
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 2,
+          "tokens": {
+            "input": 292,
+            "output": 127,
+            "total": 419
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 1248,
+        "output": 547,
+        "total": 1795
+      }
+    },
+    {
+      "initial_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and growing project load, I recommend implementing a shared on-call rotation. This will ensure 24/7 coverage, reduce the burden on individuals, and improve response times. With 8 team members, rotating on-call duties will be manageable and foster a sense of shared responsibility.\n\nPlease share your thoughts by [Date]. Let's aim to finalize this by [Date] to ensure a smooth transition.\n\nBest,\n[Your Name]",
+      "initial_words": 74,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "FAIL\n1. The draft does not make a clear recommendation. It states the recommendation but then does not explicitly state whether to adopt or not adopt it.\n3. There is no mention of a real cost or risk associated with the recommendation.\n4. The draft is 123 words, which is within the acceptable range but does not provide the required reasons or costs.",
+          "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and growing project load, I recommend implementing a shared on-call rotation. This will ensure 24/7 coverage, reduce the burden on individuals, and improve response times. With 8 team members, rotating on-call duties will be manageable and foster a sense of shared responsibility.\n\nPlease share your thoughts by [Date]. Let's aim to finalize this by [Date] to ensure a smooth transition.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. This will ensure 24/7 coverage, distribute incident handling responsibilities among team members, and improve response times. With 8 team members, the rotation will be manageable, reducing the burden on individuals and fostering a sense of shared responsibility.\n\nNot adopting a rotation could lead to inconsistent incident handling, increased stress on team members, and slower response times. The cost of not implementing a rotation outweighs the benefits.\n\nPlease provide feedback by [Date]. Let's finalize this by [Date] to ensure a smooth transition.\n\nBest,\n[Your Name]"
+        },
+        {
+          "round": 2,
+          "verdict": "FAIL\n1. The draft provides a survey of options (shared on-call rotation vs. not adopting it) rather than making a clear recommendation.\n3. The draft does not name any real cost or risk of the recommendation. The stated risks and costs are hypothetical.",
+          "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. This will ensure 24/7 coverage, distribute incident handling responsibilities among team members, and improve response times. With 8 team members, the rotation will be manageable, reducing the burden on individuals and fostering a sense of shared responsibility.\n\nNot adopting a rotation could lead to inconsistent incident handling, increased stress on team members, and slower response times. The cost of not implementing a rotation outweighs the benefits.\n\nPlease provide feedback by [Date]. Let's finalize this by [Date] to ensure a smooth transition.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. This will ensure 24/7 coverage, distribute incident handling responsibilities, and improve response times. With 8 team members, the rotation will be manageable, reducing individual burden and fostering shared responsibility.\n\nNot adopting a rotation could result in inconsistent incident handling, increased stress, and slower response times. Implementing a rotation now mitigates these risks and ensures better team efficiency.\n\nPlease provide feedback by [Date]. Let's finalize this by [Date] for a smooth transition.\n\nBest,\n[Your Name]"
+        }
+      ],
+      "final_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend adopting a shared on-call rotation. This will ensure 24/7 coverage, distribute incident handling responsibilities, and improve response times. With 8 team members, the rotation will be manageable, reducing individual burden and fostering shared responsibility.\n\nNot adopting a rotation could result in inconsistent incident handling, increased stress, and slower response times. Implementing a rotation now mitigates these risks and ensures better team efficiency.\n\nPlease provide feedback by [Date]. Let's finalize this by [Date] for a smooth transition.\n\nBest,\n[Your Name]",
+      "final_words": 86,
+      "accepted": false,
+      "max_revisions": 2,
+      "model_calls": 5,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 103,
+            "total": 180
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 268,
+            "output": 76,
+            "total": 344
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 1,
+          "tokens": {
+            "input": 286,
+            "output": 129,
+            "total": 415
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 2,
+          "tokens": {
+            "input": 294,
+            "output": 54,
+            "total": 348
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 2,
+          "tokens": {
+            "input": 290,
+            "output": 120,
+            "total": 410
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 1215,
+        "output": 482,
+        "total": 1697
+      }
+    }
+  ],
+  "baseline_first_critique_fail_count": 3,
+  "vague_rubric": {
+    "initial_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and team size, I recommend adopting a shared on-call rotation. With only 8 of us, the current approach can lead to burnout and inconsistent response times. A rotation would ensure everyone gets a fair share of responsibility, maintain a balanced workload, and improve our overall responsiveness to issues. This will also enhance our preparedness and reduce the risk of critical issues slipping through the cracks.\n\nLet's discuss this further at our next meeting to finalize the details.\n\nBest,\n[Your Name]",
+    "initial_words": 91,
+    "rounds": [
+      {
+        "round": 1,
+        "verdict": "PASS",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and team size, I recommend adopting a shared on-call rotation. With only 8 of us, the current approach can lead to burnout and inconsistent response times. A rotation would ensure everyone gets a fair share of responsibility, maintain a balanced workload, and improve our overall responsiveness to issues. This will also enhance our preparedness and reduce the risk of critical issues slipping through the cracks.\n\nLet's discuss this further at our next meeting to finalize the details.\n\nBest,\n[Your Name]",
+        "revised": false
+      }
+    ],
+    "final_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process and team size, I recommend adopting a shared on-call rotation. With only 8 of us, the current approach can lead to burnout and inconsistent response times. A rotation would ensure everyone gets a fair share of responsibility, maintain a balanced workload, and improve our overall responsiveness to issues. This will also enhance our preparedness and reduce the risk of critical issues slipping through the cracks.\n\nLet's discuss this further at our next meeting to finalize the details.\n\nBest,\n[Your Name]",
+    "final_words": 91,
+    "accepted": true,
+    "max_revisions": 2,
+    "model_calls": 2,
+    "calls": [
+      {
+        "kind": "draft",
+        "tokens": {
+          "input": 77,
+          "output": 114,
+          "total": 191
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 1,
+        "tokens": {
+          "input": 212,
+          "output": 2,
+          "total": 214
+        }
+      }
+    ],
+    "total_tokens": {
+      "input": 289,
+      "output": 116,
+      "total": 405
+    }
+  },
+  "self_review_runs": [
+    {
+      "initial_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process, I recommend adopting a shared on-call rotation. With no dedicated on-call, incidents may go unnoticed, especially during off-hours. A rotation ensures coverage 24/7, allowing us to respond promptly and minimize impact. This will also help in distributing the workload and preventing burnout.\n\nLet's discuss the logistics and benefits during our next meeting. Your feedback is valuable in shaping this initiative.\n\nBest,\n[Your Name]",
+      "initial_words": 74,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "PASS",
+          "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process, I recommend adopting a shared on-call rotation. With no dedicated on-call, incidents may go unnoticed, especially during off-hours. A rotation ensures coverage 24/7, allowing us to respond promptly and minimize impact. This will also help in distributing the workload and preventing burnout.\n\nLet's discuss the logistics and benefits during our next meeting. Your feedback is valuable in shaping this initiative.\n\nBest,\n[Your Name]",
+          "revised": false
+        }
+      ],
+      "final_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nConsidering our current incident handling process, I recommend adopting a shared on-call rotation. With no dedicated on-call, incidents may go unnoticed, especially during off-hours. A rotation ensures coverage 24/7, allowing us to respond promptly and minimize impact. This will also help in distributing the workload and preventing burnout.\n\nLet's discuss the logistics and benefits during our next meeting. Your feedback is valuable in shaping this initiative.\n\nBest,\n[Your Name]",
+      "final_words": 74,
+      "accepted": true,
+      "max_revisions": 2,
+      "model_calls": 2,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 102,
+            "total": 179
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 239,
+            "output": 2,
+            "total": 241
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 316,
+        "output": 104,
+        "total": 420
+      }
+    },
+    {
+      "initial_draft": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nAdopting a shared on-call rotation could significantly enhance our incident response and team cohesion. With only 8 of us, current incident handling can be unpredictable and may not always be effective. A rotation would ensure that everyone is prepared and can respond quickly, reducing downtime and improving reliability. It also fosters a sense of shared responsibility and keeps everyone up-to-date with our systems. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+      "initial_words": 80,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "FAIL\n1. The draft does not make a clear recommendation. It suggests discussing the idea further rather than adopting or not adopting it.\n2. The draft provides only one concrete reason (enhanced incident response and team cohesion) instead of two.\n3. There is no mention of a real cost or risk associated with the recommendation.\n4. The draft is 108 words, which is within the acceptable range but does not fully address the rubric requirements.",
+          "draft_before": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nAdopting a shared on-call rotation could significantly enhance our incident response and team cohesion. With only 8 of us, current incident handling can be unpredictable and may not always be effective. A rotation would ensure that everyone is prepared and can respond quickly, reducing downtime and improving reliability. It also fosters a sense of shared responsibility and keeps everyone up-to-date with our systems. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled haphazardly, which can lead to inconsistent responses and potential downtime. A rotation would ensure quicker and more reliable incident resolution, enhancing our service reliability and team cohesion. It also reduces the risk of burnout by distributing the responsibility evenly among team members. This change will require a small initial investment in communication tools but will pay off in the long run. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]"
+        },
+        {
+          "round": 2,
+          "verdict": "PASS\n\nYour draft meets all the criteria:\n1. It makes a clear recommendation (adopt a shared on-call rotation).\n2. It gives two concrete reasons tied to the stated situation (faster incident resolution, enhanced service reliability and team cohesion).\n3. It names one real cost or risk (a small initial investment in communication tools).\n4. The word count is 114, fitting within the 100-140 word limit.\n5. It contains no invented facts about the team.",
+          "draft_before": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled haphazardly, which can lead to inconsistent responses and potential downtime. A rotation would ensure quicker and more reliable incident resolution, enhancing our service reliability and team cohesion. It also reduces the risk of burnout by distributing the responsibility evenly among team members. This change will require a small initial investment in communication tools but will pay off in the long run. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+          "revised": false
+        }
+      ],
+      "final_draft": "Subject: Shared On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled haphazardly, which can lead to inconsistent responses and potential downtime. A rotation would ensure quicker and more reliable incident resolution, enhancing our service reliability and team cohesion. It also reduces the risk of burnout by distributing the responsibility evenly among team members. This change will require a small initial investment in communication tools but will pay off in the long run. Let's discuss this further at our next meeting.\n\nBest,\n[Your Name]",
+      "final_words": 90,
+      "accepted": true,
+      "max_revisions": 2,
+      "model_calls": 4,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 104,
+            "total": 181
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 241,
+            "output": 94,
+            "total": 335
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 1,
+          "tokens": {
+            "input": 305,
+            "output": 114,
+            "total": 419
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 2,
+          "tokens": {
+            "input": 251,
+            "output": 104,
+            "total": 355
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 874,
+        "output": 416,
+        "total": 1290
+      }
+    },
+    {
+      "initial_draft": "Subject: On-Call Rotation Consideration\n\nTeam,\n\nWe're evaluating the benefits of adopting a shared on-call rotation to improve our incident response and ensure 24/7 coverage. Currently, incidents are handled by the first person to notice them, which can lead to delays and uneven workload distribution. A rotation would help:\n\n1. **Improve Response Times:** Ensure faster incident resolution.\n2. **Reduce Burnout:** Even out the workload and prevent overburdening individuals.\n3. **Enhance Team Coordination:** Foster a culture of shared responsibility and knowledge sharing.\n\nLet's discuss the pros and cons in our next stand-up to decide if a rotation aligns with our goals. \n\nBest,\n[Your Name]",
+      "initial_words": 102,
+      "rounds": [
+        {
+          "round": 1,
+          "verdict": "FAIL\n1. The draft does not make a clear recommendation (adopt/do not adopt).\n2. The draft provides two reasons but does not explicitly recommend adoption or non-adoption.\n3. The draft does not name a real cost or risk of the recommendation.\n4. The draft is 125 words, which is within the acceptable range but not optimal for clarity.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+          "draft_before": "Subject: On-Call Rotation Consideration\n\nTeam,\n\nWe're evaluating the benefits of adopting a shared on-call rotation to improve our incident response and ensure 24/7 coverage. Currently, incidents are handled by the first person to notice them, which can lead to delays and uneven workload distribution. A rotation would help:\n\n1. **Improve Response Times:** Ensure faster incident resolution.\n2. **Reduce Burnout:** Even out the workload and prevent overburdening individuals.\n3. **Enhance Team Coordination:** Foster a culture of shared responsibility and knowledge sharing.\n\nLet's discuss the pros and cons in our next stand-up to decide if a rotation aligns with our goals. \n\nBest,\n[Your Name]",
+          "revised": true,
+          "draft_after": "Subject: Recommendation for Shared On-Call Rotation\n\nTeam,\n\nWe should adopt a shared on-call rotation to enhance our incident response and prevent workload imbalances. Currently, incidents are handled by the first available team member, leading to variable response times and potential burnout. A rotation would:\n\n1. **Improve Response Times:** Ensure faster incident resolution.\n2. **Reduce Burnout:** Even out the workload and prevent overburdening individuals.\n3. **Enhance Team Coordination:** Foster a culture of shared responsibility and knowledge sharing.\n\nGiven these benefits, I recommend we implement a shared on-call rotation.\n\nBest,\n[Your Name]"
+        },
+        {
+          "round": 2,
+          "verdict": "PASS",
+          "draft_before": "Subject: Recommendation for Shared On-Call Rotation\n\nTeam,\n\nWe should adopt a shared on-call rotation to enhance our incident response and prevent workload imbalances. Currently, incidents are handled by the first available team member, leading to variable response times and potential burnout. A rotation would:\n\n1. **Improve Response Times:** Ensure faster incident resolution.\n2. **Reduce Burnout:** Even out the workload and prevent overburdening individuals.\n3. **Enhance Team Coordination:** Foster a culture of shared responsibility and knowledge sharing.\n\nGiven these benefits, I recommend we implement a shared on-call rotation.\n\nBest,\n[Your Name]",
+          "revised": false
+        }
+      ],
+      "final_draft": "Subject: Recommendation for Shared On-Call Rotation\n\nTeam,\n\nWe should adopt a shared on-call rotation to enhance our incident response and prevent workload imbalances. Currently, incidents are handled by the first available team member, leading to variable response times and potential burnout. A rotation would:\n\n1. **Improve Response Times:** Ensure faster incident resolution.\n2. **Reduce Burnout:** Even out the workload and prevent overburdening individuals.\n3. **Enhance Team Coordination:** Foster a culture of shared responsibility and knowledge sharing.\n\nGiven these benefits, I recommend we implement a shared on-call rotation.\n\nBest,\n[Your Name]",
+      "final_words": 90,
+      "accepted": true,
+      "max_revisions": 2,
+      "model_calls": 4,
+      "calls": [
+        {
+          "kind": "draft",
+          "tokens": {
+            "input": 77,
+            "output": 147,
+            "total": 224
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 1,
+          "tokens": {
+            "input": 284,
+            "output": 95,
+            "total": 379
+          }
+        },
+        {
+          "kind": "revision",
+          "round": 1,
+          "tokens": {
+            "input": 349,
+            "output": 129,
+            "total": 478
+          }
+        },
+        {
+          "kind": "critique",
+          "round": 2,
+          "tokens": {
+            "input": 266,
+            "output": 2,
+            "total": 268
+          }
+        }
+      ],
+      "total_tokens": {
+        "input": 976,
+        "output": 373,
+        "total": 1349
+      }
+    }
+  ],
+  "self_review_first_critique_fail_count": 2,
+  "max_revisions_6": {
+    "initial_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nAs we navigate incident handling, I recommend we implement a shared on-call rotation. Currently, incidents are handled by whoever notices them, which can lead to inconsistent response times and potential gaps in coverage. A shared rotation would ensure 24/7 coverage, improve response times, and distribute the workload more evenly. This approach also enhances our team's readiness and reduces the strain on individuals who might handle incidents frequently.\n\nLet's discuss the details and set up a rotation plan that works for everyone. \n\nBest,\n[Your Name]",
+    "initial_words": 89,
+    "rounds": [
+      {
+        "round": 1,
+        "verdict": "FAIL\n1. The draft does not make a clear recommendation. It suggests implementing a shared on-call rotation but does not explicitly state whether to adopt or not adopt this recommendation.\n2. The draft provides two concrete reasons: improving response times and distributing the workload evenly. However, it does not tie these reasons directly to the stated situation.\n3. The draft does not name any real cost or risk of the recommendation.\n4. The draft is 118 words, which is within the acceptable range but not strictly 100-140 words.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nAs we navigate incident handling, I recommend we implement a shared on-call rotation. Currently, incidents are handled by whoever notices them, which can lead to inconsistent response times and potential gaps in coverage. A shared rotation would ensure 24/7 coverage, improve response times, and distribute the workload more evenly. This approach also enhances our team's readiness and reduces the strain on individuals who might handle incidents frequently.\n\nLet's discuss the details and set up a rotation plan that works for everyone. \n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled by whoever notices them, leading to inconsistent response times and potential gaps in coverage. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload more evenly, reducing the strain on individuals. This approach enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      },
+      {
+        "round": 2,
+        "verdict": "FAIL\n1. The draft does not make a clear recommendation; it merely suggests discussing the idea.\n2. The draft provides only one concrete reason (improving response times and workload distribution) instead of two.\n3. The draft does not mention any real cost or risk associated with the recommendation.\n4. The draft is 113 words, which is within the acceptable range but not long enough to fully address the recommendation.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled by whoever notices them, leading to inconsistent response times and potential gaps in coverage. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload more evenly, reducing the strain on individuals. This approach enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI strongly recommend we adopt a shared on-call rotation. Currently, incidents are handled by whoever notices them, leading to inconsistent response times and potential gaps in coverage. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload more evenly, reducing the strain on individuals. This approach will also minimize the risk of burnout and enhance our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      },
+      {
+        "round": 3,
+        "verdict": "FAIL\n1. The draft is a survey of options rather than making a clear recommendation.\n3. There is no mention of a real cost or risk associated with the recommendation.\n4. The draft is 117 words, which is below the required minimum.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI strongly recommend we adopt a shared on-call rotation. Currently, incidents are handled by whoever notices them, leading to inconsistent response times and potential gaps in coverage. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload more evenly, reducing the strain on individuals. This approach will also minimize the risk of burnout and enhance our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      },
+      {
+        "round": 4,
+        "verdict": "FAIL\n1. The draft does not clearly state whether to adopt or not adopt the on-call rotation.\n2. The draft provides only one concrete reason (improving response times and coverage) and one additional benefit (distributing workload evenly), falling short of the requirement for two concrete reasons tied to the situation.\n3. The draft does not mention any real cost or risk associated with the recommendation.\n4. The draft is 123 words, which is within the word limit but does not fully address the rubric requirements.\n5. The draft does not contain invented facts about the team beyond what the brief states, but it does not fully address the other rubric items.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency. Without a rotation, we risk critical incidents going unaddressed, which could impact our service uptime and user experience. Additionally, uneven workload distribution can lead to burnout and reduced morale.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      },
+      {
+        "round": 5,
+        "verdict": "FAIL\n1. The draft provides a survey of options (shared on-call rotation vs. no rotation) rather than making a clear recommendation.\n2. While two reasons are given, they are not tied to the stated situation. The reasons provided (improving response times and distributing workload) are general and not specific to the current inconsistent handling of incidents.\n3. No real cost or risk of the recommendation is named.\n4. The draft is 121 words, which is within the acceptable range but not a strict failure.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency. Without a rotation, we risk critical incidents going unaddressed, which could impact our service uptime and user experience. Additionally, uneven workload distribution can lead to burnout and reduced morale.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency. Without a rotation, critical incidents could go unaddressed, impacting our service uptime and user experience. Additionally, uneven workload distribution can lead to burnout and reduced morale.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      },
+      {
+        "round": 6,
+        "verdict": "FAIL\n1. The draft provides a survey of options (shared on-call rotation vs. no rotation) rather than making a clear recommendation.\n2. The draft provides two concrete reasons (improved response times and workload distribution) tied to the stated situation.\n3. The draft names a real cost or risk (uneven workload distribution and burnout) of not adopting the recommendation.\n4. The draft is 119 words, which is within the specified range.\n5. The draft does not contain any invented facts about the team beyond what the brief states.",
+        "draft_before": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. This approach minimizes risks and enhances our team's readiness and efficiency. Without a rotation, critical incidents could go unaddressed, impacting our service uptime and user experience. Additionally, uneven workload distribution can lead to burnout and reduced morale.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+        "revised": true,
+        "draft_after": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. Without a rotation, critical incidents could go unaddressed, impacting our service uptime and user experience. This approach minimizes risks and enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]"
+      }
+    ],
+    "final_draft": "Subject: On-Call Rotation Recommendation\n\nTeam,\n\nI recommend we adopt a shared on-call rotation. Currently, incidents are handled inconsistently, leading to variable response times and potential coverage gaps. Implementing a rotation will ensure 24/7 coverage, improve response times, and distribute the workload evenly, reducing individual strain and burnout. Without a rotation, critical incidents could go unaddressed, impacting our service uptime and user experience. This approach minimizes risks and enhances our team's readiness and efficiency.\n\nLet's discuss and set up a rotation plan that works for everyone.\n\nBest,\n[Your Name]",
+    "final_words": 88,
+    "accepted": false,
+    "max_revisions": 6,
+    "model_calls": 13,
+    "calls": [
+      {
+        "kind": "draft",
+        "tokens": {
+          "input": 77,
+          "output": 116,
+          "total": 193
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 1,
+        "tokens": {
+          "input": 281,
+          "output": 133,
+          "total": 414
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 1,
+        "tokens": {
+          "input": 356,
+          "output": 102,
+          "total": 458
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 2,
+        "tokens": {
+          "input": 267,
+          "output": 107,
+          "total": 374
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 2,
+        "tokens": {
+          "input": 316,
+          "output": 112,
+          "total": 428
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 3,
+        "tokens": {
+          "input": 277,
+          "output": 54,
+          "total": 331
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 3,
+        "tokens": {
+          "input": 273,
+          "output": 103,
+          "total": 376
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 4,
+        "tokens": {
+          "input": 268,
+          "output": 139,
+          "total": 407
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 4,
+        "tokens": {
+          "input": 349,
+          "output": 140,
+          "total": 489
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 5,
+        "tokens": {
+          "input": 305,
+          "output": 127,
+          "total": 432
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 5,
+        "tokens": {
+          "input": 374,
+          "output": 137,
+          "total": 511
+        }
+      },
+      {
+        "kind": "critique",
+        "round": 6,
+        "tokens": {
+          "input": 302,
+          "output": 114,
+          "total": 416
+        }
+      },
+      {
+        "kind": "revision",
+        "round": 6,
+        "tokens": {
+          "input": 358,
+          "output": 123,
+          "total": 481
+        }
+      }
+    ],
+    "total_tokens": {
+      "input": 3803,
+      "output": 1507,
+      "total": 5310
+    }
+  }
+}
