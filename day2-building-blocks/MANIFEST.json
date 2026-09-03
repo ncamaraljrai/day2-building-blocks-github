@@ -1,0 +1,20 @@
+{
+  "repository": "day2-building-blocks-github",
+  "version": "v1",
+  "objective": "Generate the single Day 2 submission document after real Ollama evidence.",
+  "windows_entrypoint": "GENERATE-COMPLETE-DAY2.ps1",
+  "final_output": "submission/Day2-Building-Blocks-Lab-Submission-FINAL.md",
+  "files": [
+    ".gitignore",
+    "GENERATE-COMPLETE-DAY2.ps1",
+    "GENERATE-COMPLETE-DAY2.sh",
+    "README.md",
+    "evidence/.gitkeep",
+    "src/ollama_shim.py",
+    "submission/.gitkeep",
+    "templates/submission-base.txt",
+    "tools/finalize_submission.py",
+    "tools/run_day2_evidence.py",
+    "tools/verify_completeness.py"
+  ]
+}

@@ -1,0 +1,265 @@
+# Day 2 — Building Blocks Lab Submission
+
+**Learner:** Nilson Cardoso Amaral Junior  
+**Runtime for code labs:** Local Ollama  
+**Finalization rule:** This document is generated only after Labs 2.2, 2.3, and 2.6 have real execution evidence.
+
+---
+
+# Lab 2.1 — Design two tools on paper
+
+## Tool 1 — `find_calendar_person`
+
+### Name
+`find_calendar_person`
+
+### Description for the model
+Resolve a person name or known nickname to the internal calendar identity, canonical display name, and timezone. Use this before any calendar operation when the user supplies a human-readable name rather than a verified internal `person_id`. It does not search by department, job role, or free-form organizational attributes, and it never changes calendar data.
+
+### Argument schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "string",
+      "description": "Person id, first name, or full name. Trim surrounding whitespace."
+    }
+  },
+  "required": ["query"]
+}
+```
+
+## Tool 2 — `check_calendar_availability`
+
+### Name
+`check_calendar_availability`
+
+### Description for the model
+Return the busy blocks and working hours for one verified person on one specific date. Use this after resolving the person's `person_id` and before proposing or booking a slot involving that person. It reads one person and one day per call; it does not create meetings, infer a different date, or search by name.
+
+### Argument schema
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "person_id": {
+      "type": "string",
+      "description": "Verified internal calendar person id returned by find_calendar_person."
+    },
+    "date": {
+      "type": "string",
+      "description": "Calendar date in ISO format YYYY-MM-DD."
+    }
+  },
+  "required": ["person_id", "date"]
+}
+```
+
+## (a) Failure case
+
+For `check_calendar_availability` with an invalid id:
+
+```text
+Unknown person_id 'anna'. Call find_calendar_person first. Valid ids: ['ana', 'ben', 'cai'].
+```
+
+That wording tells the agent both what was wrong and the recovery action: resolve the person first and retry with a valid internal id.
+
+For a bad date:
+
+```text
+date must be ISO format YYYY-MM-DD, got 'next Monday'.
+```
+
+This tells the model the exact accepted format instead of encouraging a blind retry.
+
+## (b) Confusable neighbour
+
+A plausible neighbour is `search_people_by_role(role)`.
+
+Boundary added to `find_calendar_person`:
+
+> Use this only to resolve a supplied human name or known id; do not use it to discover people by role or team — use `search_people_by_role` for that.
+
+Boundary added to `search_people_by_role`:
+
+> Use this for discovery by organizational role; if the user already named a person and you only need the internal calendar id, use `find_calendar_person` instead.
+
+## (c) Tool I refuse to build
+
+I would not expose `delete_calendar_event_without_confirmation(event_id)` to this scheduling agent. Deleting an existing event can affect multiple people and may be difficult to reverse after notifications or downstream workflows fire, so it sits in the high-impact / lower-reversibility part of the Day 1 risk grid. If deletion is ever needed, the agent should prepare a proposed cancellation and require explicit human approval before trusted code performs it.
+
+## (d) Blast radius
+
+**`find_calendar_person`:** a wrong-but-valid query can resolve the wrong person, contaminating every later availability or scheduling decision. The tool itself is read-only, so the immediate blast radius is bounded, but the incorrect identity can propagate.
+
+**`check_calendar_availability`:** a valid but wrong `person_id` or date can make the agent believe a slot is safe when it checked the wrong calendar/day. The direct tool is read-only, but the downstream blast radius can become a wrongly scheduled meeting if later write tools trust that result.
+
+---
+
+[[LAB22_RUNTIME]]
+
+---
+
+[[LAB23_RUNTIME]]
+
+---
+
+# Lab 2.4 — Decompose a goal properly
+
+**Goal:** Organize a small team workshop.
+
+## 1. Upfront plan: vague → sharpened
+
+| # | Vague version | Sharpened, actionable version |
+|---|---|---|
+| 1 | Define the workshop | Confirm the workshop objective, expected outcome, attendee list, target week, duration, and budget owner; produce a one-page workshop brief. |
+| 2 | Find a venue | Identify three venue/room options that fit the attendee count, required equipment, target week, and budget; record capacity, availability, and cost. |
+| 3 | Schedule everyone | Collect attendee availability for the target week and produce two candidate time slots that satisfy the required attendees and venue availability. |
+| 4 | Build the agenda | Draft a timed agenda with 3–5 sessions, an owner for each session, expected output, and required pre-work, all tied to the confirmed workshop objective. |
+| 5 | Finalize logistics | Confirm the selected slot and venue, send the agenda/pre-work, record dietary/accessibility needs, and publish one final logistics note with owner and due date for every open item. |
+
+Each sharpened task passes the colleague test because it specifies the output, scope, and completion condition.
+
+## 2. Dependencies and parallelism
+
+| Sub-task | Must wait for | Parallel opportunity |
+|---|---|---|
+| 1. Confirm brief | none | starts first |
+| 2. Venue options | 1 | can run in parallel with 4 once constraints are known |
+| 3. Candidate slots | 1; final candidate must consider 2 | availability collection can overlap with 2 |
+| 4. Draft agenda | 1 | can run in parallel with 2 and availability collection |
+| 5. Final logistics | 2, 3, 4 | no; integration step |
+
+The strongest parallel section is venue research + attendee availability collection + initial agenda design after the brief is fixed.
+
+## 3. Forced replan
+
+### Discovery
+At the end of sub-task 1, the budget owner reports that the available budget is **half the assumed amount** and external venue rental is no longer affordable.
+
+### Revised remaining tasks
+1. Keep the confirmed objective, attendee list, duration, and target week.
+2. Replace external venue research with: identify two internal rooms or a remote/hybrid option that satisfy capacity and equipment requirements at zero rental cost.
+3. Continue attendee availability collection, but intersect the candidate slots with internal-room availability.
+4. Keep the agenda task, but replace paid catering/material assumptions with internal/virtual alternatives.
+5. Finalize logistics using the selected internal/hybrid setup and explicitly record any capability sacrificed because of the reduced budget.
+
+### What survived?
+The objective, attendees, timing constraints, availability work, and core agenda logic survived. Venue/cost assumptions and some logistics changed. Most of the high-level plan remained useful, which suggests planning the **stable structure** up front while leaving implementation detail revisable.
+
+## 4. Progress tracker
+
+```text
+[done]    Confirm objective, attendees, duration, target week, and revised budget
+[done]    Identify two internal/hybrid venue options
+[current] Intersect attendee availability with room availability; produce two candidate slots
+[todo]    Finalize timed agenda and session owners
+[todo]    Confirm slot/venue and publish logistics + pre-work
+```
+
+If the agent crashed here, the checklist would tell me exactly which outputs already exist, what it was actively doing, and what remains. The raw conversation history contains the same events but would require reconstructing state from many turns and could hide whether an earlier activity was merely discussed or actually completed.
+
+---
+
+# Lab 2.5 — One agent or several?
+
+**Task:** Produce a short market overview of three competitors.
+
+## 1. Single-agent design
+
+### Responsibilities
+One agent would:
+1. identify/confirm the three competitors;
+2. retrieve current official product, positioning, feature, and pricing evidence;
+3. record source URLs/dates and caveats;
+4. normalize the evidence into a common comparison schema;
+5. compare strengths, weaknesses, pricing, and target customer;
+6. distinguish sourced facts from inference;
+7. draft the short overview;
+8. verify that each material claim is supported by retrieved evidence.
+
+### Tool set
+- `search_competitor_sources(query, domain_filter)`
+- `fetch_source_page(url)`
+- `extract_pricing_and_features(page_content, schema)`
+- `get_page_metadata(url)`
+- optionally a calculator for normalized pricing comparisons
+
+### Worst-moment context
+The largest context occurs during final synthesis: the goal and instructions, tool definitions, retrieved evidence for all three competitors, source metadata/caveats, normalized comparison notes, intermediate reasoning, and the draft/verification state are all present together. For a genuinely short overview this is still manageable, but raw page dumps could make it unnecessarily large.
+
+## 2. Multi-agent redesign
+
+### Agent A — Evidence Collector
+**Role:** Retrieve and normalize current first-party evidence for all three competitors.  
+**Tools:** search, page fetch, page metadata, structured extractor.
+
+**Handoff to Agent B:**
+
+```json
+{
+  "competitors": [
+    {
+      "name": "...",
+      "positioning": "...",
+      "pricing": [{"tier": "...", "price": "...", "unit": "..."}],
+      "features": ["..."],
+      "sources": [
+        {"url": "...", "retrieved_at": "...", "source_type": "official"}
+      ],
+      "caveats": ["..."]
+    }
+  ]
+}
+```
+
+### Agent B — Comparative Analyst
+**Role:** Compare the normalized evidence and produce explicit similarities, differences, and uncertainty notes.  
+**Tools:** calculator only; no browser required if the evidence contract is complete.
+
+**Handoff to Agent C:**
+
+```json
+{
+  "comparison": [
+    {
+      "dimension": "pricing|positioning|features|target_customer",
+      "finding": "...",
+      "supporting_source_ids": ["..."],
+      "confidence": "high|medium|low",
+      "caveat": "..."
+    }
+  ],
+  "recommended_emphasis": ["..."]
+}
+```
+
+### Agent C — Writer / verifier
+**Role:** Produce the short market overview without introducing claims that are absent from the structured evidence.  
+**Tools:** source-id lookup/verification tool only.
+
+## 3. Lossy handoff
+
+The Evidence Collector may notice that a pricing page looks current but one footnote says a price applies only to annual prepayment. If its normalized handoff includes the number but omits that caveat, the Analyst can make a mathematically clean but materially wrong comparison. The receiving agent cannot recover context that never crossed the interface; this is why the handoff schema explicitly includes `caveats` and source metadata.
+
+## 4. Honest trade-off and decision
+
+**Real improvement from multi-agent:** the research context can be separated from analysis/writing, and evidence collection can be parallelized across competitors. A fresh writer also has less incentive to rationalize an earlier research mistake.
+
+**New cost/failure mode:** extra model calls, lossy interfaces, duplicated context, integration mistakes, and a harder trace when the final claim is wrong.
+
+**Decision:** for a **short overview of only three competitors**, I would start with a **single agent with a structured plan and tightly bounded retrieval**, not a multi-agent system. The task does not inherently require distinct permissions/specialties, the context should fit if tool output is capped, and the latency benefit from parallel workers is unlikely to justify the coordination cost. I would split it only if evidence volume overflows one context, different workers require materially different tools/permissions, or measured latency/quality shows that parallel specialization helps.
+
+---
+
+[[LAB26_RUNTIME]]
+
+---
+
+# Final submission integrity
+
+Labs 2.2, 2.3, and 2.6 in the generated final document are populated only from `evidence/day2-evidence.json`, which is created by real Ollama runs. The generator refuses to produce the final submission if required runtime evidence is absent.
